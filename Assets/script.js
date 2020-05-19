@@ -3,7 +3,8 @@ $("#currentDay").text(moment().format("dddd, MMMM Do"));
 var alltextarea = $("textarea");
 
 for (var i = 0; i < alltextarea.length; i++) {
-	var ElDvHour = parseInt(alltextarea[i].getAttribute("data-value"));
+	var ElDvHour = parseInt($(alltextarea[i]).attr("data-value"));
+	// 	var ElDvHour = parseInt(alltextarea[i].getAttribute("data-value"));
 	var currentHour = parseInt(moment().format("HH"));
 	// If the time of my textarea is prior to current time make gray
 	if (ElDvHour < currentHour) {
@@ -30,7 +31,8 @@ $(document).ready(function () {
 function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
-			alltextarea[i].getAttribute("id"),
+			$(alltextarea[i]).attr("id"),
+			// alltextarea[i].getAttribute("id"),
 			$(alltextarea[i]).val()
 			// alltextarea[i].value
 		);
