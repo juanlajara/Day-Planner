@@ -6,7 +6,7 @@ for (var i = 0; i < alltextarea.length; i++) {
 	var ElDvHour = parseInt($(alltextarea[i]).attr("data-value"));
 	// 	var ElDvHour = parseInt(alltextarea[i].getAttribute("data-value"));
 	var currentHour = parseInt(moment().format("HH"));
-	// If the time of my textarea is prior to current time make gray
+	// Color TextArea based on past,present or future
 	if (ElDvHour < currentHour) {
 		$(alltextarea[i]).addClass("past");
 	} else if (ElDvHour > currentHour) {
@@ -15,12 +15,6 @@ for (var i = 0; i < alltextarea.length; i++) {
 		$(alltextarea[i]).addClass("present");
 	}
 }
-
-// $(document).ready(function () {
-// 	$("button").click(function () {
-// 		console.log(this);
-// 	});
-// });
 
 $(document).ready(function () {
 	$("button").click(function () {
@@ -32,8 +26,8 @@ function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
 			$(alltextarea[i]).attr("id"),
-			$(alltextarea[i]).val()
 			// alltextarea[i].getAttribute("id"),
+			$(alltextarea[i]).val()
 			// alltextarea[i].value
 		);
 		// const element = alltextarea[time];
