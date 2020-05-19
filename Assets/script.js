@@ -23,12 +23,9 @@ $(document).ready(function () {
 	});
 });
 
-// renderTxtArea();
+renderTxtArea();
 
-// function renderTxtArea() {
-// 	debugger;
-// 	alltextarea.forEach(myFunction);
-// }
+function renderTxtArea() {}
 
 function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
