@@ -1,6 +1,4 @@
-// Show current date on the header
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
-
 var alltextarea = $("textarea");
 
 for (var i = 0; i < alltextarea.length; i++) {
