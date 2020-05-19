@@ -1,4 +1,5 @@
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
+
 var alltextarea = $("textarea");
 
 for (var i = 0; i < alltextarea.length; i++) {
@@ -30,7 +31,8 @@ function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
 			alltextarea[i].getAttribute("id"),
-			alltextarea[i].value
+			$(alltextarea[i]).val()
+			// alltextarea[i].value
 		);
 		// const element = alltextarea[time];
 	}
