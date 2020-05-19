@@ -23,6 +23,13 @@ $(document).ready(function () {
 	});
 });
 
+// renderTxtArea();
+
+// function renderTxtArea() {
+// 	debugger;
+// 	alltextarea.forEach(myFunction);
+// }
+
 function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
@@ -33,5 +40,3 @@ function storeTxtArea() {
 		);
 	}
 }
-
-function renderTxtArea() {}
