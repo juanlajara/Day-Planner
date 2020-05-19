@@ -13,3 +13,27 @@ for (var i = 0; i < alltextarea.length; i++) {
 		$(alltextarea[i]).addClass("present");
 	}
 }
+
+// $(document).ready(function () {
+// 	$("button").click(function () {
+// 		console.log(this);
+// 	});
+// });
+
+$(document).ready(function () {
+	$("button").click(function () {
+		storeTxtArea();
+	});
+});
+
+function storeTxtArea() {
+	for (let i = 0; i < alltextarea.length; i++) {
+		localStorage.setItem(
+			alltextarea[i].getAttribute("id"),
+			alltextarea[i].value
+		);
+		// const element = alltextarea[time];
+	}
+	alltextarea;
+	// If storedevent + each text area
+}
