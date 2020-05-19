@@ -32,4 +32,11 @@ function storeTxtArea() {
 	}
 }
 
-function renderTxtArea() {}
+renderTxtArea();
+
+function renderTxtArea() {
+	for (let i = 0; i < alltextarea.length; i++) {
+		storedItem = localStorage.getItem($(alltextarea[i]).attr("id"));
+		$(alltextarea[i]).val(storedItem);
+	}
+}
