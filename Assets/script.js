@@ -23,6 +23,15 @@ $(document).ready(function () {
 	});
 });
 
+renderTxtArea();
+
+function renderTxtArea() {
+	for (let i = 0; i < alltextarea.length; i++) {
+		storedItem = localStorage.getItem($(alltextarea[i]).attr("id"));
+		$(alltextarea[i]).val(storedItem);
+	}
+}
+
 function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
@@ -33,5 +42,3 @@ function storeTxtArea() {
 		);
 	}
 }
-
-function renderTxtArea() {}
