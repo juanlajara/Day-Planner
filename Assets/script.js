@@ -1,3 +1,4 @@
+// Show current date on the header
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
 
 var alltextarea = $("textarea");
@@ -30,8 +31,7 @@ function storeTxtArea() {
 			$(alltextarea[i]).val()
 			// alltextarea[i].value
 		);
-		// const element = alltextarea[time];
 	}
-	alltextarea;
-	// If storedevent + each text area
 }
+
+function renderTxtArea() {}
