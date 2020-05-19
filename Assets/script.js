@@ -32,8 +32,8 @@ function storeTxtArea() {
 	for (let i = 0; i < alltextarea.length; i++) {
 		localStorage.setItem(
 			$(alltextarea[i]).attr("id"),
-			// alltextarea[i].getAttribute("id"),
 			$(alltextarea[i]).val()
+			// alltextarea[i].getAttribute("id"),
 			// alltextarea[i].value
 		);
 		// const element = alltextarea[time];
